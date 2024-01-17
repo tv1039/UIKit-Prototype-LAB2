@@ -114,6 +114,10 @@ class DataManger {
         return ["\(name)1","\(name)2"]
     }
     
+    func getUserData(index: Int) -> User {
+        return self.userDataArray[index]
+    }
+    
     
 }
 
