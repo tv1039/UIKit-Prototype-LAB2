@@ -9,6 +9,7 @@ import UIKit
 
 class MapViewController: UIViewController {
 
+    public var filter : Tag?
     override func viewDidLoad() {
         super.viewDidLoad()
 

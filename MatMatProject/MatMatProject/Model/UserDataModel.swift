@@ -46,6 +46,19 @@ class DataManger {
     private var userDataArray : [User] = []
     private var foodDataArray : [Food] = []
     
+    var filter : Tag?
+    
+    var filterdFood : [Food] {
+        if let filter {
+            return foodDataArray.filter { food in
+                return food.foodTag == filter
+            }
+        } else {
+                return foodDataArray
+        }
+    }
+    
+    
     init () {
         foodDataArray = [
             Food(name: "약수터식당", foodTag: .hyodo, image: getImageData(name: "약수터식당"), webLink: "https://m.place.naver.com/restaurant/18557324/home", address: "경기 안성시 양성면 만세로 667", latitude: 37.0600856, longitude: 127.190229),
