@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-   
+    
     
     let tagName = Tag.allCases
     var functionArray : [Selector] = [#selector(hydo),#selector(alchol),#selector(dating),#selector(something)]
@@ -36,6 +36,7 @@ class ViewController: UIViewController {
     }
     
     func buildInterface() {
+        
         // 메인
         let scrollView = UIScrollView()
         scrollView.backgroundColor = .systemBackground
@@ -52,19 +53,18 @@ class ViewController: UIViewController {
         
         scrollView.contentSize = CGSize(width: view.frame.width, height: 1500)
         
-
+        
         let contentStackView = UIStackView()
-        contentStackView.spacing = 20
+        contentStackView.spacing = 10
         contentStackView.axis = .vertical
-//        contentStackView.backgroundColor = .blue
+        //        contentStackView.backgroundColor = .blue
         scrollView.addSubview(contentStackView)
         
-
+        
         contentStackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            contentStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            contentStackView.topAnchor.constraint(equalTo: scrollView.bottomAnchor)
+            contentStackView.topAnchor.constraint(equalTo: scrollView.topAnchor , constant: 10)
         ])
         
         
@@ -74,7 +74,15 @@ class ViewController: UIViewController {
         
         let label = UILabel()
         label.text = "  주제별 맛집"
+        label.textColor = .systemYellow
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        
         contentStackView.addArrangedSubview(label)
+        
+        
+        //        contentStackView.setCustomSpacing(10, after: view)
         
         let miniScrollView = UIScrollView()
         miniScrollView.contentSize = CGSize(width: view.frame.width, height: 110)
@@ -108,10 +116,6 @@ class ViewController: UIViewController {
         
         
         miniScrollView.contentSize = CGSize(width: CGFloat(numberOfItems) * (itemWidth + spacing ) - spacing , height: itemHeight)
-        // 이미지 위에 덧씌워질 가상의 투명한 버튼
-        
-        
-        
         miniScrollView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -122,16 +126,31 @@ class ViewController: UIViewController {
         
         contentStackView.addArrangedSubview(miniScrollView)
         
-        //뷰 이동 버튼 1
+        
+        // 태그별 맛집과 피드 게시물을 구분하는 얇은 선
+        let lineView = UIView()
+        lineView.backgroundColor = .systemGray
+        contentStackView.addArrangedSubview(lineView)
+        
+        lineView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            lineView.heightAnchor.constraint(equalToConstant: 2),
+            lineView.topAnchor.constraint(equalTo: miniScrollView.bottomAnchor , constant: -6)
+        ])
+        
+        
+        // 피드 게시물
+        
         let viewButton1 = UIButton()
         let label2 = UILabel()
         label2.text = "  나의 피드"
+        label2.textColor = .systemBrown
         contentStackView.addArrangedSubview(label2)
         
         let image1 = UIImage(named: "content")
         viewButton1.setImage(image1, for: .normal)
         contentStackView.addArrangedSubview(viewButton1)
-       
+        
         viewButton1.addTarget(self, action: #selector(navigate), for: .touchUpInside)
         
         contentStackView.setCustomSpacing(20, after: miniScrollView)
@@ -154,17 +173,17 @@ class ViewController: UIViewController {
         viewButton3.addTarget(self, action: #selector(navigate), for: .touchUpInside)
         
         contentStackView.setCustomSpacing(20, after: viewButton2)
-
-      
+        
+        
     }
-   
+    
     
 }
 
 //이미지를 누르면 수행되는 함수
 
 extension ViewController {
-
+    
     //가로 뷰
     @objc func hydo() {
         getImageData(idx: 0)
@@ -185,11 +204,12 @@ extension ViewController {
         nextViewController.filter = Tag.allCases[idx]
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
-
-
-
-   //세로 뷰 
-   @objc func navigate() {
-        print("뷰 이동")
+    
+    
+    
+    //세로 뷰
+    @objc func navigate() {
+        let nextViewController = WebViewController()
+        self.navigationController?.pushViewController(nextViewController, animated: true)
     }
 }
