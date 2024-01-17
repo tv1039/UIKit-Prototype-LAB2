@@ -38,11 +38,7 @@ class ViewController: UIViewController {
     func buildInterface() {
         // 메인
         let scrollView = UIScrollView()
-<<<<<<< HEAD
-//        scrollView.backgroundColor = .cyan
-=======
         scrollView.backgroundColor = .systemBackground
->>>>>>> 11066155ac3e98baf14b723d2c23363c32a5d949
         view.addSubview(scrollView)
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -81,15 +77,8 @@ class ViewController: UIViewController {
         contentStackView.addArrangedSubview(label)
         
         let miniScrollView = UIScrollView()
-<<<<<<< HEAD
-//        miniScrollView.backgroundColor = .red
-        miniScrollView.contentSize = CGSize(width: view.frame.width, height: 150)
-        miniScrollView.frame = CGRect(x: 0, y: 0, width:300, height: 150)
-=======
         miniScrollView.contentSize = CGSize(width: view.frame.width, height: 110)
         miniScrollView.frame = CGRect(x: 0, y: 0, width:300, height: 110)
->>>>>>> 11066155ac3e98baf14b723d2c23363c32a5d949
-        
         
         let numberOfItems = 4
         let itemWidth : CGFloat = 100
@@ -120,16 +109,6 @@ class ViewController: UIViewController {
         
         miniScrollView.contentSize = CGSize(width: CGFloat(numberOfItems) * (itemWidth + spacing ) - spacing , height: itemHeight)
         // 이미지 위에 덧씌워질 가상의 투명한 버튼
-<<<<<<< HEAD
-        let button = UIButton()
-        button.backgroundColor = .yellow
-        button.alpha = 0.35
-        button.frame = CGRect(x: 0, y: 0, width:100, height: 100)
-//        button.addTarget(self, action: #selector(sayHello), for: .touchUpInside)
-        miniScrollView.addSubview(button)
-=======
-        
->>>>>>> 11066155ac3e98baf14b723d2c23363c32a5d949
         
         
         
@@ -143,14 +122,11 @@ class ViewController: UIViewController {
         
         contentStackView.addArrangedSubview(miniScrollView)
         
-<<<<<<< HEAD
         //뷰 이동 버튼 1
         let viewButton1 = UIButton()
-=======
         let label2 = UILabel()
         label2.text = "  나의 피드"
         contentStackView.addArrangedSubview(label2)
->>>>>>> 11066155ac3e98baf14b723d2c23363c32a5d949
         
         let image1 = UIImage(named: "content")
         viewButton1.setImage(image1, for: .normal)
@@ -181,22 +157,15 @@ class ViewController: UIViewController {
 
       
     }
-    
-<<<<<<< HEAD
    
-    
-    @objc func navigate() {
-        print("뷰 이동")
-    }
-
-=======
     
 }
 
 //이미지를 누르면 수행되는 함수
 
 extension ViewController {
-    
+
+    //가로 뷰
     @objc func hydo() {
         getImageData(idx: 0)
     }
@@ -216,5 +185,11 @@ extension ViewController {
         nextViewController.filter = Tag.allCases[idx]
         self.navigationController?.pushViewController(nextViewController, animated: true)
     }
->>>>>>> 11066155ac3e98baf14b723d2c23363c32a5d949
+
+
+
+   //세로 뷰 
+   @objc func navigate() {
+        print("뷰 이동")
+    }
 }
