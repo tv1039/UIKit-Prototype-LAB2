@@ -32,9 +32,9 @@ class ViewController: UIViewController {
     }
     
     func buildInterface() {
-        
+        // 메인
         let scrollView = UIScrollView()
-        scrollView.backgroundColor = .cyan
+//        scrollView.backgroundColor = .cyan
         view.addSubview(scrollView)
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -46,13 +46,24 @@ class ViewController: UIViewController {
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
-        scrollView.contentSize = CGSize(width: view.frame.width, height: 2500)
+        scrollView.contentSize = CGSize(width: view.frame.width, height: 1500)
         
+
         let contentStackView = UIStackView()
         contentStackView.axis = .vertical
-        
-        contentStackView.translatesAutoresizingMaskIntoConstraints = false
+//        contentStackView.backgroundColor = .blue
         scrollView.addSubview(contentStackView)
+        
+
+        contentStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            contentStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            contentStackView.topAnchor.constraint(equalTo: scrollView.bottomAnchor)
+        ])
+        
+        
+        
         
         // contentStackView 안쪽 내용들
         
@@ -61,7 +72,7 @@ class ViewController: UIViewController {
         contentStackView.addArrangedSubview(label)
         
         let miniScrollView = UIScrollView()
-        miniScrollView.backgroundColor = .red
+//        miniScrollView.backgroundColor = .red
         miniScrollView.contentSize = CGSize(width: view.frame.width, height: 150)
         miniScrollView.frame = CGRect(x: 0, y: 0, width:300, height: 150)
         
@@ -75,7 +86,7 @@ class ViewController: UIViewController {
         button.backgroundColor = .yellow
         button.alpha = 0.35
         button.frame = CGRect(x: 0, y: 0, width:100, height: 100)
-        button.addTarget(self, action: #selector(sayHello), for: .touchUpInside)
+//        button.addTarget(self, action: #selector(sayHello), for: .touchUpInside)
         miniScrollView.addSubview(button)
         
         
@@ -89,14 +100,43 @@ class ViewController: UIViewController {
         
         contentStackView.addArrangedSubview(miniScrollView)
         
-        let label2 = UILabel()
-        label2.text = "Hello, world!"
-        contentStackView.addArrangedSubview(label2)
+        //뷰 이동 버튼 1
+        let viewButton1 = UIButton()
         
+        let image1 = UIImage(named: "content")
+        viewButton1.setImage(image1, for: .normal)
+        contentStackView.addArrangedSubview(viewButton1)
+       
+        viewButton1.addTarget(self, action: #selector(navigate), for: .touchUpInside)
+        
+        contentStackView.setCustomSpacing(20, after: miniScrollView)
+        //뷰 이동 버튼 2
+        let viewButton2 = UIButton()
+        
+        let image2 = UIImage(named: "content")
+        viewButton2.setImage(image2, for: .normal)
+        contentStackView.addArrangedSubview(viewButton2)
+        
+        contentStackView.setCustomSpacing(20, after: viewButton1)
+        
+        //뷰 이동 버튼 3
+        let viewButton3 = UIButton()
+        
+        let image3 = UIImage(named: "content")
+        viewButton3.setImage(image3, for: .normal)
+        contentStackView.addArrangedSubview(viewButton3)
+        
+        viewButton3.addTarget(self, action: #selector(navigate), for: .touchUpInside)
+        
+        contentStackView.setCustomSpacing(20, after: viewButton2)
+
+      
     }
     
-    @objc func sayHello() {
-        print("Hello World")
+   
+    
+    @objc func navigate() {
+        print("뷰 이동")
     }
 
 }
