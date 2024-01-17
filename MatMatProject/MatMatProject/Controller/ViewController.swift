@@ -57,7 +57,6 @@ class ViewController: UIViewController {
         let contentStackView = UIStackView()
         contentStackView.spacing = 10
         contentStackView.axis = .vertical
-        //        contentStackView.backgroundColor = .blue
         scrollView.addSubview(contentStackView)
         
         
@@ -82,7 +81,7 @@ class ViewController: UIViewController {
         contentStackView.addArrangedSubview(label)
         
         
-        //        contentStackView.setCustomSpacing(10, after: view)
+        // contentStackView.setCustomSpacing(10, after: view)
         
         let miniScrollView = UIScrollView()
         miniScrollView.contentSize = CGSize(width: view.frame.width, height: 110)
