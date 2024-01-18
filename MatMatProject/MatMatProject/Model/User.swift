@@ -9,7 +9,7 @@ struct User {
     var date : String
     var emoji : String
     var content : String
-    var star : String
+    var star : Double
     var pin : Bool // 찜 여부
     var food : Food
 }
