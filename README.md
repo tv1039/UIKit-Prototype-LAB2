@@ -16,9 +16,9 @@ __2. MapView와 WebView를 이용하여 서브 페이지를 구성한다__
       - 해당 이미지버튼을 누르면 각각의 정보가 핀으로 고정되어 있는 맵뷰와 테이블뷰로 리스트를 확인할 수 있다.
     - 사용자별 맛집 피드형식
        - 사용자별 입력한 피드들은 각각의 음식점 정보를 담고있는 웹뷰의 링크로 이동한다.
-<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/145957641/b3741d62-2469-4a4e-96ea-d6c01ede210a" width="300px" />
-<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/145957641/0cb2a626-27ec-4ad6-9db4-54d6dd6e305e" width="300px" />
-<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/145957641/a1b55f2c-cf91-43ac-a06e-b5ca0a6fbaa4" width="300px" />
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/145957641/b3741d62-2469-4a4e-96ea-d6c01ede210a" width="200px" />
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/145957641/0cb2a626-27ec-4ad6-9db4-54d6dd6e305e" width="200px" />
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/145957641/a1b55f2c-cf91-43ac-a06e-b5ca0a6fbaa4" width="200px" />
 
 ## 사용자 시나리오
 1. 오늘 데이트를 하러 가기로한 A씨. 어디를 가야할지 고민하다 앱에서 보았던 "데이튜맛집" (주제별 맛집) 카테고리가 생각난다.
