@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 
 class WebViewController: UIViewController, WKNavigationDelegate {
-    private let dataManager : DataManger = DataManger()
+    private let dataManager : DataManager = DataManager()
     
     var webView: WKWebView!
 

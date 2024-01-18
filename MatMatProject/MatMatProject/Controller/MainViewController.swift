@@ -8,12 +8,18 @@
 import UIKit
 
 class MainViewController: UIViewController, UITableViewDataSource , UITableViewDelegate , UICollectionViewDataSource , UICollectionViewDelegate {
+
+    
     
 
     
 
-    private let horizontalCollcetionView : UICollectionView
-    private let verticalTableVeiw : UITableView
+    private let postCollcetionView : UICollectionView
+//    private let verticalTableVeiw : UITableView
+    
+    var userDataArray : [User] = []
+    var userDataManager = DataManager()
+    var count = 0
 
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -22,27 +28,27 @@ class MainViewController: UIViewController, UITableViewDataSource , UITableViewD
         let collcetionViewLayout = UICollectionViewFlowLayout()
         
         // Cell의 크기와 간격
-        collcetionViewLayout.itemSize = CGSize(width: 150, height: 100) // 셀의 크기?
+        collcetionViewLayout.itemSize = CGSize(width: 350, height: 500) // 셀의 크기?
         collcetionViewLayout.minimumLineSpacing = 10 // 줄 간격
         collcetionViewLayout.minimumInteritemSpacing = 10// 셀 간격
-        collcetionViewLayout.scrollDirection = .horizontal // 가로 스크롤
+        collcetionViewLayout.scrollDirection = .vertical // 가로 스크롤
         
         // 위치는 AutoLayout으로 관리하기 위해 임시로 .zero
-        horizontalCollcetionView = UICollectionView(frame: .zero, collectionViewLayout: collcetionViewLayout)
+        postCollcetionView = UICollectionView(frame: .zero, collectionViewLayout: collcetionViewLayout)
         
         
-        //테이블 뷰 초기화
-        verticalTableVeiw = UITableView()
+//        //테이블 뷰 초기화
+//        verticalTableVeiw = UITableView()
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        horizontalCollcetionView.dataSource = self
-        horizontalCollcetionView.delegate = self
-        horizontalCollcetionView.register(TagCollectionViewCell.self, forCellWithReuseIdentifier: TagCollectionViewCell.identifier)
+        postCollcetionView.dataSource = self
+        postCollcetionView.delegate = self
         
-        verticalTableVeiw.dataSource = self
-        verticalTableVeiw.delegate = self
-        verticalTableVeiw.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.identifier)
+        postCollcetionView.register(PostCollectionViewCell.self, forCellWithReuseIdentifier: "reuseIdentifier")
+//        verticalTableVeiw.dataSource = self
+//        verticalTableVeiw.delegate = self
+//        verticalTableVeiw.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.identifier)
     }
     
     required init?(coder: NSCoder) {
@@ -55,6 +61,13 @@ class MainViewController: UIViewController, UITableViewDataSource , UITableViewD
         self.view.backgroundColor = .systemBackground
         
         setupNaviBar()
+        setupData()
+        setCollectioViewCellLayout()
+        
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
     }
     
     func setupNaviBar() {
@@ -73,7 +86,27 @@ class MainViewController: UIViewController, UITableViewDataSource , UITableViewD
     }
     
     func setCollectioViewCellLayout() {
+        let safeArea: UILayoutGuide = view.safeAreaLayoutGuide
+        
+        postCollcetionView.backgroundColor = .lightGray
+        self.view.addSubview(postCollcetionView)
+        
+        postCollcetionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            
+            postCollcetionView.topAnchor.constraint(equalTo: safeArea.topAnchor),
+            postCollcetionView.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor),
+            postCollcetionView.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor),
+            postCollcetionView.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor),
+            
+            
+            
+        ])
+    }
     
+    func setupData(){
+        userDataArray = userDataManager.userDataArray
     }
     
     
@@ -86,12 +119,27 @@ class MainViewController: UIViewController, UITableViewDataSource , UITableViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return userDataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "reuseIdentifier", for: indexPath) as! PostCollectionViewCell
+        cell.storeLabel.text = userDataArray[indexPath.row].food.name
+        cell.starLabel.text = userDataArray[indexPath.row].star
+        cell.addressLabel.text = userDataArray[indexPath.row].food.address
+        cell.foodImageView.image = UIImage(named: userDataArray[indexPath.row].food.image)
+        cell.emojiButton.setTitle("\(userDataArray[indexPath.row].emoji) \(count)", for: .normal)
+        cell.emojiButton.addTarget(self, action: #selector(addCount), for: .touchUpInside)
+        
+        return cell
     }
+    
+    @objc func addCount() {
+        print("눌렸냐")
+        count += 1
+    }
+    
+
     
     
 
