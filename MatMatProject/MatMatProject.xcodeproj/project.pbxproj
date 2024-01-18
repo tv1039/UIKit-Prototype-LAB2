@@ -18,6 +18,7 @@
 		4695DC8C2B5789FF006C54AE /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4695DC8B2B5789FF006C54AE /* UserTableViewCell.swift */; };
 		4695DC8E2B578A47006C54AE /* TagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4695DC8D2B578A47006C54AE /* TagCollectionViewCell.swift */; };
 		4695DC902B57AD9C006C54AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4695DC8F2B57AD9C006C54AE /* ViewController.swift */; };
+		5432800A2B57E3D90012D9C0 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 543280092B57E3D90012D9C0 /* images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4695DC8B2B5789FF006C54AE /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		4695DC8D2B578A47006C54AE /* TagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCollectionViewCell.swift; sourceTree = "<group>"; };
 		4695DC8F2B57AD9C006C54AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		543280092B57E3D90012D9C0 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		4695DC6D2B575493006C54AE /* MatMatProject */ = {
 			isa = PBXGroup;
 			children = (
+				543280092B57E3D90012D9C0 /* images */,
 				4695DC8A2B5789D2006C54AE /* View */,
 				4695DC832B5754DD006C54AE /* Controller */,
 				4695DC822B5754D8006C54AE /* Model */,
@@ -164,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5432800A2B57E3D90012D9C0 /* images in Resources */,
 				4695DC7B2B575495006C54AE /* LaunchScreen.storyboard in Resources */,
 				4695DC782B575495006C54AE /* Assets.xcassets in Resources */,
 			);
@@ -328,7 +332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U3XKZ56Z4Q;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MatMatProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -359,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U3XKZ56Z4Q;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MatMatProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
