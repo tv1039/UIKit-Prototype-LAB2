@@ -10,7 +10,7 @@ import UIKit
 class MapViewController: UIViewController {
 
     public var filter : Tag?
-    private let dataManager : DataManger = DataManger()
+    private let dataManager : DataManager = DataManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         

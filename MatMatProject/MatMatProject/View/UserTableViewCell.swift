@@ -7,7 +7,7 @@ class UserTableViewCell: UITableViewCell {
     
     static let identifier = "UserTableViewCell"
     
-    let DataManager: DataManger = DataManger()
+    let DataManager = DataManager()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
