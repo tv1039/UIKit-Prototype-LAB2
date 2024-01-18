@@ -13,32 +13,7 @@
 
 import Foundation
 
-enum Tag : String , CaseIterable{
-    case hyodo = "효도별 맛집"
-    case dating = "데이튜 맛집"
-    case alchol = "애주가 맛집"
-    case something = "분위기 맛집"
-}
 
-struct User {
-    var id : String
-    var date : String
-    var emoji : String
-    var content : String
-    var star : String
-    var pin : Bool // 찜 여부
-    var food : Food
-}
-
-struct Food {
-    var name : String
-    var foodTag : Tag
-    var image : [String]
-    var webLink : String
-    var address : String
-    var latitude : Double
-    var longitude : Double
-}
 
 class DataManger {
     //유저 데이터를 담을 공간
