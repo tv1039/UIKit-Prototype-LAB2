@@ -88,7 +88,7 @@ class ViewController: UIViewController {
             print(xOffset)
             
             let imageView = UIImageView()
-            imageView.image = UIImage(named: tagName[i].rawValue)
+            imageView.image = UIImage(named: "tag\(i+1)")
             imageView.frame = CGRect(x: xOffset, y: 0, width:100, height: 100)
             miniScrollView.addSubview(imageView)
             

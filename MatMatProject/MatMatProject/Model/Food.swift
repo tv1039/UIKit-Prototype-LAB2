@@ -8,7 +8,7 @@
 struct Food {
     var name : String
     var foodTag : Tag
-    var image : [String]
+    var image : String
     var webLink : String
     var address : String
     var latitude : Double

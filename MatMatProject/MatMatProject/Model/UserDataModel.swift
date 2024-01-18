@@ -36,24 +36,24 @@ class DataManger {
     
     init () {
         foodDataArray = [
-            Food(name: "약수터식당", foodTag: .hyodo, image: getImageData(name: "약수터식당"), webLink: "https://m.place.naver.com/restaurant/18557324/home", address: "경기 안성시 양성면 만세로 667", latitude: 37.0600856, longitude: 127.190229),
-            Food(name: "진가", foodTag: .alchol, image: getImageData(name: "진가"), webLink: "https://m.place.naver.com/restaurant/1940095324/location?subtab=location&selected_place_id=1940095324", address: "서울 마포구 동교로34길 12 2층 진가", latitude: 37.5609102, longitude: 126.9249441),
-            Food(name: "한울밥상", foodTag: .hyodo, image: getImageData(name: "한울밥상"), webLink: "https://m.place.naver.com/restaurant/36668406/home", address: "전북 전주시 완산구 기린대로 104", latitude: 35.818719, longitude: 127.1548823),
-            Food(name: "진미집", foodTag: .alchol, image: getImageData(name: "진미집"), webLink: "https://m.place.naver.com/restaurant/11710234/home", address: "전북 전주시 완산구 노송여울2길 106", latitude: 35.8268518, longitude: 127.1424212),
-            Food(name: "당산옛날곱창", foodTag: .alchol, image: getImageData(name: "당산옛날곱창"), webLink: "https://m.place.naver.com/restaurant/36028358/home", address: "서울특별시 영등포구 당산동6가 당산로47길 14", latitude: 37.5353365, longitude: 126.9022659),
-            Food(name: "밀리네 감자탕", foodTag: .alchol, image: getImageData(name: "밀리네 감자탕"), webLink: "", address: "충북 단양군 단양읍 삼봉로 272 미락", latitude: 36.9808793, longitude: 128.3688421),
-            Food(name: "포유티", foodTag: .dating, image: getImageData(name: "포유티"), webLink: "https://m.place.naver.com/restaurant/37912977/home", address: "서울 송파구 위례성대로18길 28-13", latitude: 37.5100233, longitude: 127.1242478),
-            Food(name: "풍류랑", foodTag: .something, image: getImageData(name: "풍류랑"), webLink: "https://m.place.naver.com/restaurant/1809480572/home", address: "서울 강남구 논현로28길 24 풍류랑", latitude: 37.4831707, longitude: 127.0444),
-            Food(name: "장어독립", foodTag: .hyodo, image: getImageData(name: "장어독립"), webLink: "https://m.place.naver.com/restaurant/20713456/home", address: "경기 양주시 백석읍 양주산성로 460", latitude: 37.7852556, longitude: 127.0029126),
-            Food(name: "타마", foodTag: .dating, image: getImageData(name: "타마"), webLink: "https://m.place.naver.com/restaurant/20083721/home", address: "서울 영등포구 은행로 30 1층", latitude: 37.5281888, longitude: 126.9227229),
-            Food(name: "도동집", foodTag: .something, image: getImageData(name: "도동집"), webLink: "https://m.place.naver.com/restaurant/37641712/home", address: "서울 용산구 후암로48길 1", latitude: 37.5528883, longitude: 126.9768823),
-            Food(name: "삼청동수제비", foodTag: .hyodo, image: getImageData(name: "삼청동수제비"), webLink: "https://m.place.naver.com/restaurant/11569605/home", address: "서울 종로구 삼청로 101-1", latitude: 37.5844951, longitude: 126.9818969),
-            Food(name: "서촌뜰애우곱창타운", foodTag: .alchol, image: getImageData(name: "서촌뜰애우곱창타운"), webLink: "https://m.place.naver.com/restaurant/92055122/home", address: "서울 종로구 자하문로1나길 1", latitude: 37.5765641, longitude: 126.9716148),
-            Food(name: "파파라구", foodTag: .dating, image: getImageData(name: "파파라구"), webLink: "https://m.place.naver.com/restaurant/1013295267/home", address: "경기 성남시 분당구 판교역로10번길 22-3", latitude: 37.3856782, longitude: 127.1119632),
-            Food(name: "또순이네집", foodTag: .hyodo, image: getImageData(name: "또순이네집"), webLink: "https://m.place.naver.com/restaurant/1232888128/location?subtab=location&selected_place_id=1232888128", address: "서울 영등포구 선유로47길 16 오오1004빌딩", latitude: 37.5357487, longitude: 126.8952452),
-            Food(name: "몽탄", foodTag: .hyodo, image: getImageData(name: "몽탄"), webLink: "https://m.place.naver.com/restaurant/1810277002/location?subtab=location&selected_place_id=1810277002" , address: "서울 용산구 백범로99길 50", latitude: 37.535959, longitude: 126.9722312
+            Food(name: "약수터식당", foodTag: .hyodo, image: "1" , webLink: "https://m.place.naver.com/restaurant/18557324/home", address: "경기 안성시 양성면 만세로 667", latitude: 37.0600856, longitude: 127.190229),
+            Food(name: "진가", foodTag: .alchol, image:"2" , webLink: "https://m.place.naver.com/restaurant/1940095324/location?subtab=location&selected_place_id=1940095324", address: "서울 마포구 동교로34길 12 2층 진가", latitude: 37.5609102, longitude: 126.9249441),
+            Food(name: "한울밥상", foodTag: .hyodo, image: "3", webLink: "https://m.place.naver.com/restaurant/36668406/home", address: "전북 전주시 완산구 기린대로 104", latitude: 35.818719, longitude: 127.1548823),
+            Food(name: "진미집", foodTag: .alchol, image: "4", webLink: "https://m.place.naver.com/restaurant/11710234/home", address: "전북 전주시 완산구 노송여울2길 106", latitude: 35.8268518, longitude: 127.1424212),
+            Food(name: "당산옛날곱창", foodTag: .alchol, image: "5", webLink: "https://m.place.naver.com/restaurant/36028358/home", address: "서울특별시 영등포구 당산동6가 당산로47길 14", latitude: 37.5353365, longitude: 126.9022659),
+            Food(name: "밀리네 감자탕", foodTag: .alchol, image: "6", webLink: "", address: "충북 단양군 단양읍 삼봉로 272 미락", latitude: 36.9808793, longitude: 128.3688421),
+            Food(name: "포유티", foodTag: .dating, image: "7", webLink: "https://m.place.naver.com/restaurant/37912977/home", address: "서울 송파구 위례성대로18길 28-13", latitude: 37.5100233, longitude: 127.1242478),
+            Food(name: "풍류랑", foodTag: .something, image: "8", webLink: "https://m.place.naver.com/restaurant/1809480572/home", address: "서울 강남구 논현로28길 24 풍류랑", latitude: 37.4831707, longitude: 127.0444),
+            Food(name: "장어독립", foodTag: .hyodo, image: "9", webLink: "https://m.place.naver.com/restaurant/20713456/home", address: "경기 양주시 백석읍 양주산성로 460", latitude: 37.7852556, longitude: 127.0029126),
+            Food(name: "타마", foodTag: .dating, image:"10" , webLink: "https://m.place.naver.com/restaurant/20083721/home", address: "서울 영등포구 은행로 30 1층", latitude: 37.5281888, longitude: 126.9227229),
+            Food(name: "도동집", foodTag: .something, image: "11", webLink: "https://m.place.naver.com/restaurant/37641712/home", address: "서울 용산구 후암로48길 1", latitude: 37.5528883, longitude: 126.9768823),
+            Food(name: "삼청동수제비", foodTag: .hyodo, image: "12", webLink: "https://m.place.naver.com/restaurant/11569605/home", address: "서울 종로구 삼청로 101-1", latitude: 37.5844951, longitude: 126.9818969),
+            Food(name: "서촌뜰애우곱창타운", foodTag: .alchol, image: "13", webLink: "https://m.place.naver.com/restaurant/92055122/home", address: "서울 종로구 자하문로1나길 1", latitude: 37.5765641, longitude: 126.9716148),
+            Food(name: "파파라구", foodTag: .dating, image: "14", webLink: "https://m.place.naver.com/restaurant/1013295267/home", address: "경기 성남시 분당구 판교역로10번길 22-3", latitude: 37.3856782, longitude: 127.1119632),
+            Food(name: "또순이네집", foodTag: .hyodo, image: "15", webLink: "https://m.place.naver.com/restaurant/1232888128/location?subtab=location&selected_place_id=1232888128", address: "서울 영등포구 선유로47길 16 오오1004빌딩", latitude: 37.5357487, longitude: 126.8952452),
+            Food(name: "몽탄", foodTag: .hyodo, image: "16", webLink: "https://m.place.naver.com/restaurant/1810277002/location?subtab=location&selected_place_id=1810277002" , address: "서울 용산구 백범로99길 50", latitude: 37.535959, longitude: 126.9722312
                 ),
-            Food(name: "운봉산장", foodTag: .hyodo, image: getImageData(name: "운봉산장"), webLink: "https://m.place.naver.com/restaurant/19867548/location?subtab=location&selected_place_id=19867548", address: "서울 동작구 장승배기로 118-1", latitude: 37.5080646, longitude: 126.9403207)
+            Food(name: "운봉산장", foodTag: .hyodo, image: "17", webLink: "https://m.place.naver.com/restaurant/19867548/location?subtab=location&selected_place_id=19867548", address: "서울 동작구 장승배기로 118-1", latitude: 37.5080646, longitude: 126.9403207)
             
         ]
         userDataArray = [
