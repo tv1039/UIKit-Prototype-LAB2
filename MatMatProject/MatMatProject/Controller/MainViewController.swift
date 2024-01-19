@@ -19,7 +19,7 @@ class MainViewController: UIViewController , UICollectionViewDataSource , UIColl
     let colors : [UIColor] = [.systemYellow,.systemRed,.black , .systemBlue , .systemCyan]
     
     lazy var addPostButton : UIBarButtonItem = {
-        let button = UIBarButtonItem(barButtonSystemItem: .add, target: MainViewController.self, action: #selector(addPostButtonTapped))
+        let button = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addPostButtonTapped))
         return button
     }()
 
@@ -64,6 +64,13 @@ class MainViewController: UIViewController , UICollectionViewDataSource , UIColl
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        
+        //뷰가 다시 나타나면 데이터를 다시 리로드 
+        setupData()
+        postCollcetionView.reloadData()
+        
+//        print(userDataArray)
 
     }
     
@@ -113,12 +120,19 @@ class MainViewController: UIViewController , UICollectionViewDataSource , UIColl
         cell.storeLabel.text = userDataArray[indexPath.row].food.name
         cell.starLabel.text = "\(userDataArray[indexPath.row].star)/5.0"
         cell.addressLabel.text = userDataArray[indexPath.row].food.address
-        cell.foodImageView.image = UIImage(named: userDataArray[indexPath.row].food.image)
+        let name : String = userDataArray[indexPath.row].food.image
+        
+        if name == "" {
+            cell.foodImageView.image = UIImage(systemName: "photo.artframe")
+        } else {
+            cell.foodImageView.image = UIImage(named: userDataArray[indexPath.row].food.image)
+        }
+        
         cell.emojiButton.setTitle("\(userDataArray[indexPath.row].emoji) \(count)", for: .normal)
         cell.emojiButton.addTarget(self, action: #selector(addCount), for: .touchUpInside)
-        cell.emojiButton.backgroundColor = colors[indexPath.row]
+        cell.emojiButton.backgroundColor = colors.randomElement()
         cell.iDLabel.text = userDataArray[indexPath.row].id
-        cell.tagLabel.text = "#\(userDataArray[indexPath.row].food.foodTag.rawValue)"
+        cell.tagLabel.text = "#\(userDataArray[indexPath.row].food.foodTag)"
         cell.contentLabel.text = "\"\(userDataArray[indexPath.row].content)\""
         return cell
     }
@@ -135,7 +149,7 @@ class MainViewController: UIViewController , UICollectionViewDataSource , UIColl
     
     @objc func addPostButtonTapped() {
         let addPostVcC = AddPostViewController()
-        present(addPostVcC, animated: false , completion: nil)
+        self.navigationController?.pushViewController(addPostVcC, animated: true)
     }
 
 }

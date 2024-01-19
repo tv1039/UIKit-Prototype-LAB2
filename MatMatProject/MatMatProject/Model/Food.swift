@@ -7,7 +7,7 @@
 
 struct Food {
     var name : String
-    var foodTag : Tag
+    var foodTag : String
     var image : String
     var webLink : String
     var address : String

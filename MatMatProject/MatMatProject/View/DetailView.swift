@@ -30,7 +30,7 @@ class DetailView: UIView {
         return starLabel
     }()
     
-    
+
     lazy var  storeStarHorizontal : UIStackView = {
         let sv = UIStackView(arrangedSubviews: [storeLabel,starLabel])
         sv.axis = .horizontal
@@ -39,7 +39,6 @@ class DetailView: UIView {
         sv.translatesAutoresizingMaskIntoConstraints = false
         return sv
     }()
-    
     
     
     // 식당 주소
@@ -57,10 +56,7 @@ class DetailView: UIView {
         return imageView
     }()
     
-    
-    
-    
-    
+ 
     // 이모지
     let emojiButton: UIButton = {
         let emojiButton = UIButton(type: .custom)
@@ -92,8 +88,7 @@ class DetailView: UIView {
         return sv
     }()
     
-    
-    
+
     //ID
     let iDLabel: UILabel = {
         let iDLabel = UILabel()
@@ -158,7 +153,7 @@ class DetailView: UIView {
             foodImageView.image = UIImage(named: userData.food.image)
             emojiButton.setTitle(userData.emoji, for: .normal)
             iDLabel.text = "작성자: \(userData.id)"
-            tagLabel.text = "#\(userData.food.foodTag.rawValue)"
+            tagLabel.text = "#\(userData.food.foodTag)"
             contentLabel.text = "맛집평가: \(userData.content)"
         }
                 
