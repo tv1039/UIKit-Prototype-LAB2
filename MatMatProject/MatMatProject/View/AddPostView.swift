@@ -9,10 +9,10 @@ import UIKit
 
 
 // 새로운 게시글 작성시 필요한 것들
-// 사진(ImageView), 아이디(TextField), 맛집 이름(TextField) , 장소(TextField) , 맛집 추천 내용(TextField) , 별점(TextField(Double만 허용)) , 추천 태그(TextField) , 원하는 이모지 (TextField)
+// 사진(ImageView), 아이디(TextField), 맛집 이름(TextField) , 장소(TextField) , 웹 링크(TextField) , 맛집 추천 내용(TextField) , 별점(TextField(Double만 허용)) , 추천 태그(TextField) , 원하는 이모지 (TextField) 
 
 class AddPostView: UIView {
-
+    
     //MARK: - UI
     
     let foodImageView : UIImageView = {
@@ -38,6 +38,29 @@ class AddPostView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    let idLabelTextField : UITextField = {
+        let tf = UITextField()
+        tf.frame.size.height = 20
+        tf.textColor = .black
+        tf.borderStyle = .roundedRect
+        tf.autocapitalizationType = .none
+        tf.autocorrectionType = .no
+        tf.spellCheckingType = .no
+        tf.clearsOnBeginEditing = false
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        return tf
+    }()
+    
+    lazy var idStackView : UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [idLabel,idLabelTextField] )
+        stackView.spacing = 5
+        stackView.axis = .horizontal
+        stackView.distribution = .fill
+        stackView.alignment = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
     let storeLabel : UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 10)
@@ -61,11 +84,19 @@ class AddPostView: UIView {
     }()
     let tagLabel : UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.font = UIFont.boldSystemFont(ofSize: 10)
         label.text = "추천태그(하나만):"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
- 
-
+    
+    let emojiLabel : UILabel = {
+        let label = UILabel()
+        label.font = UIFont.boldSystemFont(ofSize: 10)
+        label.text = "이모티콘(하나만):"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    
 }
