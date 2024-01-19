@@ -19,6 +19,7 @@ class AddPostView: UIView {
         let imageView = UIImageView()
         imageView.backgroundColor = .systemGray3
         imageView.image = UIImage(systemName: "photo.artframe")
+        imageView.tintColor = .gray
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -26,6 +27,7 @@ class AddPostView: UIView {
     lazy var imageContainView : UIView = {
         let view = UIView()
         view.addSubview(foodImageView)
+        view.backgroundColor = .systemGray3
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -330,7 +332,7 @@ class AddPostView: UIView {
     //오토레이아웃
     func setConstraints() {
         NSLayoutConstraint.activate([
-            foodImageView.heightAnchor.constraint(equalToConstant: 150),
+            foodImageView.heightAnchor.constraint(equalToConstant: 120),
             foodImageView.widthAnchor.constraint(equalToConstant: 150),
             foodImageView.centerXAnchor.constraint(equalTo: imageContainView.centerXAnchor),
             foodImageView.centerYAnchor.constraint(equalTo: imageContainView.centerYAnchor)

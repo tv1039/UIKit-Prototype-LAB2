@@ -95,7 +95,7 @@ class PostCollectionViewCell: UICollectionViewCell {
     }
     
     func setUpBorder() {
-        self.layer.borderWidth = 2.0
+        self.layer.borderWidth = 1.0
         self.layer.borderColor = UIColor.lightGray.cgColor
         self.layer.cornerRadius = 3.0
     }
