@@ -42,15 +42,19 @@ __2. WebView를 이용하여 식당 정보 페이지를 보여주도록 한다__
 - IOS 17.2.1
 
 ## 2조 조원이름
-- [김예지](https://github.com/nxtlevYeah)
+- 김예지 [@nxtlevYeah](https://github.com/nxtlevYeah)
 ######
-- [심소영](https://github.com/simsoyung)
+- 심소영 [@simsoyung](https://github.com/simsoyung)
 ######
-- [정운관](https://github.com/UnGwan)
+- 정운관 [@UnGwan](https://github.com/UnGwan)
 ######
-- [전유진](https://github.com/UDI94)
+- 전유진 [@UDI94](https://github.com/UDI94)
 ######
-- [홍승표](https://github.com/tv1039)
+- 홍승표 [@tv1039](https://github.com/tv1039)
+
+
+## Notice
+- 사진은 인터넷 검색으로 갖고왔으며 문제시 , 삭제 및 교체 조치하겠습니다. 감사합니다.
 
 ## License
 Licensed under the [MIT](LICENSE) license.
