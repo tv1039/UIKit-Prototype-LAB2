@@ -1,4 +1,4 @@
-# 프로젝트 이름 | 맛집에서 만나
+# 프로젝트 이름 | 맛집에서 맛나
 ![image](https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/145957641/f8fc2824-31ab-4cb2-bf17-3d846edffd42)
 
 ## ADS
