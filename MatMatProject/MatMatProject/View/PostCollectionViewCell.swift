@@ -36,7 +36,7 @@ class PostCollectionViewCell: UICollectionViewCell {
     // 이모지
     let emojiButton: UIButton = {
         let emojiButton = UIButton(type: .custom)
-        
+        emojiButton.layer.cornerRadius = 10
         return emojiButton
     }()
     

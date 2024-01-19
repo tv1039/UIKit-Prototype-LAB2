@@ -21,21 +21,10 @@ class DataManager {
     var userDataArray : [User] = []
     var foodDataArray : [Food] = []
     
-    var filter : Tag?
-    
-    var filterdFood : [Food] {
-        if let filter {
-            return foodDataArray.filter { food in
-                return food.foodTag == filter
-            }
-        } else {
-                return foodDataArray
-        }
-    }
-    
-    
     init () {
+        print("hello")
         foodDataArray = [
+
             Food(name: "약수터식당", foodTag: .hyodo, image: "1" , webLink: "https://m.place.naver.com/restaurant/18557324/home", address: "경기 안성시 양성면 만세로 667" ),
             Food(name: "진가", foodTag: .alchol, image:"2" , webLink: "https://m.place.naver.com/restaurant/1940095324/location?subtab=location&selected_place_id=1940095324", address: "서울 마포구 동교로34길 12 2층 진가"),
             Food(name: "한울밥상", foodTag: .hyodo, image: "3", webLink: "https://m.place.naver.com/restaurant/36668406/home", address: "전북 전주시 완산구 기린대로 104"),
@@ -51,10 +40,8 @@ class DataManager {
             Food(name: "서촌뜰애우곱창타운", foodTag: .alchol, image: "13", webLink: "https://m.place.naver.com/restaurant/92055122/home", address: "서울 종로구 자하문로1나길 1"),
             Food(name: "파파라구", foodTag: .dating, image: "14", webLink: "https://m.place.naver.com/restaurant/1013295267/home", address: "경기 성남시 분당구 판교역로10번길 22-3"),
             Food(name: "또순이네집", foodTag: .hyodo, image: "15", webLink: "https://m.place.naver.com/restaurant/1232888128/location?subtab=location&selected_place_id=1232888128", address: "서울 영등포구 선유로47길 16 오오1004빌딩"),
-            Food(name: "몽탄", foodTag: .hyodo, image: "16", webLink: "https://m.place.naver.com/restaurant/1810277002/location?subtab=location&selected_place_id=1810277002" , address: "서울 용산구 백범로99길 50"
-                ),
-            Food(name: "운봉산장", foodTag: .hyodo, image: "17", webLink: "https://m.place.naver.com/restaurant/19867548/location?subtab=location&selected_place_id=19867548", address: "서울 동작구 장승배기로 118-1")
-            
+            Food(name: "몽탄", foodTag: .hyodo, image: "16", webLink: "https://m.place.naver.com/restaurant/1810277002/location?subtab=location&selected_place_id=1810277002" , address: "서울 용산구 백범로99길 50"),
+            Food(name: "운봉산장", foodTag: "효도별 맛집", image: "17", webLink: "https://m.place.naver.com/restaurant/19867548/location?subtab=location&selected_place_id=19867548", address: "서울 동작구 장승배기로 118-1")     
         ]
         userDataArray = [
             
@@ -99,8 +86,9 @@ class DataManager {
         }[0]
     }
     
-    func getImageData(name : String) -> [String] {
-        return ["\(name)1","\(name)2"]
+    
+    func makeNewPost(user: User) {
+        userDataArray.append(user)
     }
     
     func getUserData(index: Int) -> User {

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		462BE3722B58C7BA00E36DB2 /* foodTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462BE3712B58C7BA00E36DB2 /* foodTag.swift */; };
 		462BE3742B58C7CD00E36DB2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462BE3732B58C7CD00E36DB2 /* User.swift */; };
 		462BE3762B58C7E000E36DB2 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462BE3752B58C7E000E36DB2 /* Food.swift */; };
 		462BE38D2B58E59700E36DB2 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462BE38C2B58E59700E36DB2 /* PostCollectionViewCell.swift */; };
@@ -26,7 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		462BE3712B58C7BA00E36DB2 /* foodTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodTag.swift; sourceTree = "<group>"; };
 		462BE3732B58C7CD00E36DB2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		462BE3752B58C7E000E36DB2 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		462BE38C2B58E59700E36DB2 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				4695DC882B575708006C54AE /* UserDataModel.swift */,
-				462BE3712B58C7BA00E36DB2 /* foodTag.swift */,
 				462BE3732B58C7CD00E36DB2 /* User.swift */,
 				462BE3752B58C7E000E36DB2 /* Food.swift */,
 			);
@@ -192,7 +189,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				462BE3722B58C7BA00E36DB2 /* foodTag.swift in Sources */,
 				462BE38F2B5914AC00E36DB2 /* AddPostView.swift in Sources */,
 				4695DC892B575708006C54AE /* UserDataModel.swift in Sources */,
 				4695DC732B575493006C54AE /* MainViewController.swift in Sources */,
