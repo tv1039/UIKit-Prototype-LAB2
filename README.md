@@ -6,24 +6,27 @@
 
 
 ## 구현목표
-__1. StackView와 ScrollView를 이용하여 메인 페이지를 구성한다__
+__1. StackView와 CollectionView를 이용하여 메인 페이지를 구성한다__
 ######
-__2. MapView와 WebView를 이용하여 서브 페이지를 구성한다__
+__2. WebView를 이용하여 식당 정보 페이지를 보여주도록 한다__
 ######
   - 메인 페이지는 다음과 같이 구현한다.
-    - 주제별 맛집 정보
-      - 주제별 맛집 정보는 가로형태의 ScrollView로 움직이며 각각 음식점의 태그별 정보를 가지고 있다.
-      - 해당 이미지버튼을 누르면 각각의 정보가 핀으로 고정되어 있는 맵뷰와 테이블뷰로 리스트를 확인할 수 있다.
-    - 사용자별 맛집 피드형식
-       - 사용자별 입력한 피드들은 각각의 음식점 정보를 담고있는 웹뷰의 링크로 이동한다.
-<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/145957641/b3741d62-2469-4a4e-96ea-d6c01ede210a" width="200px" />
-<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/145957641/0cb2a626-27ec-4ad6-9db4-54d6dd6e305e" width="200px" />
-<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/145957641/a1b55f2c-cf91-43ac-a06e-b5ca0a6fbaa4" width="200px" />
+    
+    + 상단 오른쪽의 추가 버튼
+      * 누르면 피드의 글을 작성하는 화면으로 넘어간다.
+
+    + 사용자별 맛집 피드형식
+       * 사용자별 입력한 피드들은 각각의 음식점 정보를 담고있는 웹뷰의 링크로 이동한다.
+       * 피드 상단엔 작성자가 평가한 식당의 점수가 놓여 있고, 피드에 아래에 놓인 이모티콘으로 반응을 남길 수 있다.
+       * 피드의 게시글을 누르면 상세페이지로 넘어가 글을 자세히 볼 수 있다.
+
+
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/53979393/1f687ebe-0ee3-43dd-a3ac-3a09e7c9ba8d" width="200px" />
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/53979393/adf423c4-0196-416d-ad9e-1899ae68a370" width="200px" />
+<img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/53979393/d15fc085-ab9e-45be-b4bc-5828b8c27071" width="200px" />
 
 ## 사용자 시나리오
-1. 오늘 데이트를 하러 가기로한 A씨. 어디를 가야할지 고민하다 앱에서 보았던 "데이튜맛집" (주제별 맛집) 카테고리가 생각난다.
-2. 앱 메인 페이지 상단에 있는 데이튜맛집을 누르니 해시태그별로 모아진 맛집이 지도에 모아져있다.
-3. A씨는 지도에 있는 식당중 가깝고, 맛있어 보이는 곳에 연인과 가기로 한다.
+1. 
 
 ## 미구현된 부분
 1. 메인뷰의 주제별 맛집 정보 및 사용자별 피드 화면이 이미지로 나타내어져 있다. -> 해당 부분 내부 뷰컨트롤러로 구현예정
