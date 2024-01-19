@@ -24,25 +24,24 @@ class DataManager {
     init () {
         print("hello")
         foodDataArray = [
-            Food(name: "약수터식당", foodTag: "효도 맛집", image: "1" , webLink: "https://m.place.naver.com/restaurant/18557324/home", address: "경기 안성시 양성면 만세로 667" ),
-            Food(name: "진가", foodTag: "애주가맛집", image:"2" , webLink: "https://m.place.naver.com/restaurant/1940095324/location?subtab=location&selected_place_id=1940095324", address: "서울 마포구 동교로34길 12 2층 진가"),
-            Food(name: "한울밥상", foodTag: "효도 맛집", image: "3", webLink: "https://m.place.naver.com/restaurant/36668406/home", address: "전북 전주시 완산구 기린대로 104"),
-            Food(name: "진미집", foodTag: "애주가맛집", image: "4", webLink: "https://m.place.naver.com/restaurant/11710234/home", address: "전북 전주시 완산구 노송여울2길 106"),
-            Food(name: "당산옛날곱창", foodTag: "애주가맛집", image: "5", webLink: "https://m.place.naver.com/restaurant/36028358/home", address: "서울특별시 영등포구 당산동6가 당산로47길 14"),
-            Food(name: "밀리네 감자탕", foodTag: "애주가맛집", image: "6", webLink: "", address: "충북 단양군 단양읍 삼봉로 272 미락"),
-            Food(name: "포유티", foodTag: "데이튜 맛집", image: "7", webLink: "https://m.place.naver.com/restaurant/37912977/home", address: "서울 송파구 위례성대로18길 28-13"),
-            Food(name: "풍류랑", foodTag: "분위기 맛집", image: "8", webLink: "https://m.place.naver.com/restaurant/1809480572/home", address: "서울 강남구 논현로28길 24 풍류랑"),
-            Food(name: "장어독립", foodTag: "효도 맛집", image: "9", webLink: "https://m.place.naver.com/restaurant/20713456/home", address: "경기 양주시 백석읍 양주산성로 460"),
-            Food(name: "타마", foodTag: "데이튜 맛집", image:"10" , webLink: "https://m.place.naver.com/restaurant/20083721/home", address: "서울 영등포구 은행로 30 1층"),
-            Food(name: "도동집", foodTag: "분위기 맛집", image: "11", webLink: "https://m.place.naver.com/restaurant/37641712/home", address: "서울 용산구 후암로48길 1"),
-            Food(name: "삼청동수제비", foodTag: "효도 맛집", image: "12", webLink: "https://m.place.naver.com/restaurant/11569605/home", address: "서울 종로구 삼청로 101-1"),
-            Food(name: "서촌뜰애우곱창타운", foodTag: "애주가맛집", image: "13", webLink: "https://m.place.naver.com/restaurant/92055122/home", address: "서울 종로구 자하문로1나길 1"),
-            Food(name: "파파라구", foodTag: "데이튜 맛집", image: "14", webLink: "https://m.place.naver.com/restaurant/1013295267/home", address: "경기 성남시 분당구 판교역로10번길 22-3"),
-            Food(name: "또순이네집", foodTag: "효도별 맛집", image: "15", webLink: "https://m.place.naver.com/restaurant/1232888128/location?subtab=location&selected_place_id=1232888128", address: "서울 영등포구 선유로47길 16 오오1004빌딩"),
-            Food(name: "몽탄", foodTag: "효도별 맛집", image: "16", webLink: "https://m.place.naver.com/restaurant/1810277002/location?subtab=location&selected_place_id=1810277002" , address: "서울 용산구 백범로99길 50"
-                ),
-            Food(name: "운봉산장", foodTag: "효도별 맛집", image: "17", webLink: "https://m.place.naver.com/restaurant/19867548/location?subtab=location&selected_place_id=19867548", address: "서울 동작구 장승배기로 118-1")
-            
+
+            Food(name: "약수터식당", foodTag: .hyodo, image: "1" , webLink: "https://m.place.naver.com/restaurant/18557324/home", address: "경기 안성시 양성면 만세로 667" ),
+            Food(name: "진가", foodTag: .alchol, image:"2" , webLink: "https://m.place.naver.com/restaurant/1940095324/location?subtab=location&selected_place_id=1940095324", address: "서울 마포구 동교로34길 12 2층 진가"),
+            Food(name: "한울밥상", foodTag: .hyodo, image: "3", webLink: "https://m.place.naver.com/restaurant/36668406/home", address: "전북 전주시 완산구 기린대로 104"),
+            Food(name: "진미집", foodTag: .alchol, image: "4", webLink: "https://m.place.naver.com/restaurant/11710234/home", address: "전북 전주시 완산구 노송여울2길 106"),
+            Food(name: "당산옛날곱창", foodTag: .alchol, image: "5", webLink: "https://m.place.naver.com/restaurant/36028358/home", address: "서울특별시 영등포구 당산동6가 당산로47길 14"),
+            Food(name: "밀리내 감자탕", foodTag: .alchol, image: "6", webLink: "https://m.place.naver.com/restaurant/35993079/location?subtab=location&selected_place_id=3599307", address: "충북 단양군 단양읍 삼봉로 272 미락"),
+            Food(name: "포유티", foodTag: .dating, image: "7", webLink: "https://m.place.naver.com/restaurant/37912977/home", address: "서울 송파구 위례성대로18길 28-13"),
+            Food(name: "풍류랑", foodTag: .something, image: "8", webLink: "https://m.place.naver.com/restaurant/1809480572/home", address: "서울 강남구 논현로28길 24 풍류랑"),
+            Food(name: "장어독립", foodTag: .hyodo, image: "9", webLink: "https://m.place.naver.com/restaurant/20713456/home", address: "경기 양주시 백석읍 양주산성로 460"),
+            Food(name: "타마", foodTag: .dating, image:"10" , webLink: "https://m.place.naver.com/restaurant/20083721/home", address: "서울 영등포구 은행로 30 1층"),
+            Food(name: "도동집", foodTag: .something, image: "11", webLink: "https://m.place.naver.com/restaurant/37641712/home", address: "서울 용산구 후암로48길 1"),
+            Food(name: "삼청동수제비", foodTag: .hyodo, image: "12", webLink: "https://m.place.naver.com/restaurant/11569605/home", address: "서울 종로구 삼청로 101-1"),
+            Food(name: "서촌뜰애우곱창타운", foodTag: .alchol, image: "13", webLink: "https://m.place.naver.com/restaurant/92055122/home", address: "서울 종로구 자하문로1나길 1"),
+            Food(name: "파파라구", foodTag: .dating, image: "14", webLink: "https://m.place.naver.com/restaurant/1013295267/home", address: "경기 성남시 분당구 판교역로10번길 22-3"),
+            Food(name: "또순이네집", foodTag: .hyodo, image: "15", webLink: "https://m.place.naver.com/restaurant/1232888128/location?subtab=location&selected_place_id=1232888128", address: "서울 영등포구 선유로47길 16 오오1004빌딩"),
+            Food(name: "몽탄", foodTag: .hyodo, image: "16", webLink: "https://m.place.naver.com/restaurant/1810277002/location?subtab=location&selected_place_id=1810277002" , address: "서울 용산구 백범로99길 50"),
+            Food(name: "운봉산장", foodTag: "효도별 맛집", image: "17", webLink: "https://m.place.naver.com/restaurant/19867548/location?subtab=location&selected_place_id=19867548", address: "서울 동작구 장승배기로 118-1")     
         ]
         userDataArray = [
             

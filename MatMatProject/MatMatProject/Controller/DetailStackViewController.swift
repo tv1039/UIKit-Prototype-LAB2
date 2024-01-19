@@ -18,6 +18,7 @@ class DetailStackViewController: UIViewController {
         super.viewDidLoad()
         setupNaviBar()
         setUpdata()
+        setUpButtonAction()
         self.view.backgroundColor = .systemBackground
         
     }
@@ -31,8 +32,6 @@ class DetailStackViewController: UIViewController {
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
-
-    
     private func setUpdata(){
         detailView.userData = userData
     }
@@ -40,7 +39,16 @@ class DetailStackViewController: UIViewController {
     override func loadView() {
         view = detailView
     }
-    
-    
+    func setUpButtonAction() {
+        detailView.mapGoButton.addTarget(self, action: #selector(self.mapButtonTapped), for: .touchUpInside)
+    }
+   
+    @objc func mapButtonTapped() {
+        if let webLink = userData?.food.webLink {
+            let webViewController = WebViewController()
+            webViewController.webLink = webLink
+            self.navigationController?.pushViewController(webViewController, animated: true)
+        }
+    }
     
 }

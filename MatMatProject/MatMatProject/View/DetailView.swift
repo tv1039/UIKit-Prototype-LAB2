@@ -34,7 +34,6 @@ class DetailView: UIView {
     lazy var  storeStarHorizontal : UIStackView = {
         let sv = UIStackView(arrangedSubviews: [storeLabel,starLabel])
         sv.axis = .horizontal
-        
         sv.spacing = 30
         sv.translatesAutoresizingMaskIntoConstraints = false
         return sv
@@ -75,6 +74,7 @@ class DetailView: UIView {
         button.backgroundColor = .systemOrange
         button.layer.cornerRadius = CGFloat(10.0)
         button.translatesAutoresizingMaskIntoConstraints = false
+        
         return button
     }()
     
@@ -168,10 +168,10 @@ class DetailView: UIView {
             stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
         ])
-        
-        
-        
-        
     }
     
+}
+
+protocol DetailViewDelegate: AnyObject {
+    func didTapMapButton(withWebLink webLink: String)
 }
