@@ -31,7 +31,7 @@ class MainViewController: UIViewController , UICollectionViewDataSource , UIColl
         
         // Cell의 크기와 간격
         collcetionViewLayout.itemSize = CGSize(width: 350, height: 450) // 셀의 크기?
-        collcetionViewLayout.minimumLineSpacing = 10 // 줄 간격
+        collcetionViewLayout.minimumLineSpacing = 20 // 줄 간격
         collcetionViewLayout.minimumInteritemSpacing = 10// 셀 간격
         collcetionViewLayout.scrollDirection = .vertical // 가로 스크롤
         
@@ -70,7 +70,6 @@ class MainViewController: UIViewController , UICollectionViewDataSource , UIColl
         setupData()
         postCollcetionView.reloadData()
         
-//        print(userDataArray)
 
     }
     
@@ -143,7 +142,6 @@ class MainViewController: UIViewController , UICollectionViewDataSource , UIColl
     }
     
     @objc func addCount() {
-        print("눌렸냐")
         count += 1
     }
     

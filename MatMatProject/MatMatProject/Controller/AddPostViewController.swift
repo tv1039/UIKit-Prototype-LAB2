@@ -61,6 +61,5 @@ class AddPostViewController: UIViewController {
     }
     
     deinit {
-        print("탈출")
     }
 }
