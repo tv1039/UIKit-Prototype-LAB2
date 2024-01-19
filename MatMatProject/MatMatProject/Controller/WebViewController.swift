@@ -10,7 +10,7 @@ import WebKit
 
 class WebViewController: UIViewController, WKNavigationDelegate {
     private let dataManager : DataManager = DataManager()
-    
+    var webLink: String = ""
     var webView: WKWebView!
 
     override func viewDidLoad() {
@@ -20,11 +20,9 @@ class WebViewController: UIViewController, WKNavigationDelegate {
         webView.navigationDelegate = self
         view = webView
         
-        let url = URL(string: dataManager.getFoodData(name: "약수터식당").webLink)
+        let url = URL(string: webLink)
         let request = URLRequest(url: url!)
         webView.load(request)
     }
-    
-    // Implement WKNavigationDelegate methods if needed
     
 }

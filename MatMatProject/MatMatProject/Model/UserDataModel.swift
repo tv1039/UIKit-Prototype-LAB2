@@ -41,7 +41,7 @@ class DataManager {
             Food(name: "한울밥상", foodTag: .hyodo, image: "3", webLink: "https://m.place.naver.com/restaurant/36668406/home", address: "전북 전주시 완산구 기린대로 104"),
             Food(name: "진미집", foodTag: .alchol, image: "4", webLink: "https://m.place.naver.com/restaurant/11710234/home", address: "전북 전주시 완산구 노송여울2길 106"),
             Food(name: "당산옛날곱창", foodTag: .alchol, image: "5", webLink: "https://m.place.naver.com/restaurant/36028358/home", address: "서울특별시 영등포구 당산동6가 당산로47길 14"),
-            Food(name: "밀리네 감자탕", foodTag: .alchol, image: "6", webLink: "", address: "충북 단양군 단양읍 삼봉로 272 미락"),
+            Food(name: "밀리내 감자탕", foodTag: .alchol, image: "6", webLink: "https://m.place.naver.com/restaurant/35993079/location?subtab=location&selected_place_id=3599307", address: "충북 단양군 단양읍 삼봉로 272 미락"),
             Food(name: "포유티", foodTag: .dating, image: "7", webLink: "https://m.place.naver.com/restaurant/37912977/home", address: "서울 송파구 위례성대로18길 28-13"),
             Food(name: "풍류랑", foodTag: .something, image: "8", webLink: "https://m.place.naver.com/restaurant/1809480572/home", address: "서울 강남구 논현로28길 24 풍류랑"),
             Food(name: "장어독립", foodTag: .hyodo, image: "9", webLink: "https://m.place.naver.com/restaurant/20713456/home", address: "경기 양주시 백석읍 양주산성로 460"),
