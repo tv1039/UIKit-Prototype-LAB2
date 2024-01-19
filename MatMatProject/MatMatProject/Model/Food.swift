@@ -11,6 +11,4 @@ struct Food {
     var image : String
     var webLink : String
     var address : String
-    var latitude : Double
-    var longitude : Double
 }

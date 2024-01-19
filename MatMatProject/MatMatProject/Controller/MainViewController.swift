@@ -18,7 +18,7 @@ class MainViewController: UIViewController , UICollectionViewDataSource , UIColl
     var count = 0
     let colors : [UIColor] = [.systemYellow,.systemRed,.black , .systemBlue , .systemCyan]
     
-    let addPostButton : UIBarButtonItem = {
+    lazy var addPostButton : UIBarButtonItem = {
         let button = UIBarButtonItem(barButtonSystemItem: .add, target: MainViewController.self, action: #selector(addPostButtonTapped))
         return button
     }()
@@ -125,15 +125,17 @@ class MainViewController: UIViewController , UICollectionViewDataSource , UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let nextViewController = DetailStackViewController()
         nextViewController.userData = userDataArray[indexPath.row]
-        self.present(nextViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(nextViewController, animated: true)
     }
+    
     @objc func addCount() {
         print("눌렸냐")
         count += 1
     }
     
     @objc func addPostButtonTapped() {
-        // 추가 화면
+        let addPostVcC = AddPostViewController()
+        present(addPostVcC, animated: false , completion: nil)
     }
 
 }
