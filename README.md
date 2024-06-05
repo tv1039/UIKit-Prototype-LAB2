@@ -1,5 +1,7 @@
 # 프로젝트 이름 | 맛집에서 맛나
-![image](https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/145957641/f8fc2824-31ab-4cb2-bf17-3d846edffd42)
+<p align = "center">
+<img src= https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/145957641/f8fc2824-31ab-4cb2-bf17-3d846edffd42>
+</p>
 
 ## ADS
 서로의 맛집에 대한 평가를 공유하고 내부 맵뷰를 통해서 주제별 식당의 위치를 확인할 있으며, 웹뷰를 통해 해당 맛집에 대한 상세정보를 얻을 수 있다.
@@ -20,10 +22,11 @@ __2. WebView를 이용하여 식당 정보 페이지를 보여주도록 한다__
        * 피드 상단엔 작성자가 평가한 식당의 점수가 놓여 있고, 피드에 아래에 놓인 이모티콘으로 반응을 남길 수 있다.
        * 피드의 게시글을 누르면 상세페이지로 넘어가 글을 자세히 볼 수 있다.
 
-
+<p align = "center">
 <img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/53979393/1f687ebe-0ee3-43dd-a3ac-3a09e7c9ba8d" width="200px" />
 <img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/53979393/adf423c4-0196-416d-ad9e-1899ae68a370" width="200px" />
 <img src="https://github.com/APP-iOS4/UIKit-Prototype-LAB2/assets/53979393/d15fc085-ab9e-45be-b4bc-5828b8c27071" width="200px" />
+</p>
 
 ## 사용자 시나리오
 1. 오늘 저녁 메뉴가 고민인 A씨. 맛있는게 먹고싶지만 딱히 떠오르는게 없어 맛맛 앱을 켠다.
